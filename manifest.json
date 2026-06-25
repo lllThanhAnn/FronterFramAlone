@@ -1,0 +1,18 @@
+{
+  "Name": "Frontier Farm",
+  "Author": "FlashShifter",
+  "Version": "1.15.11",
+  "Description": "A massive custom farm map for Stardew Valley.",
+  "UniqueID": "flashshifter.FrontierFarm",
+  "UpdateKeys": [ "Nexus:3753@FF" ],
+  "MinimumApiVersion": "4.1.7",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.ContentPatcher",
+      "IsRequired": true
+    }
+  ]
+}

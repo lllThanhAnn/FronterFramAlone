@@ -1,0 +1,483 @@
+{
+  "Format": "2.0",
+  "ConfigSchema": {
+    "SandboxLayout": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+    "RemovePicnicTable": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"RemoveEasternVerticalFence": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"RemoveStonePathways": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"RemoveTreeHidingBackyardMouseStatue": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+	"SmallerBackyardFence": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    }
+  },
+  "DynamicTokens": [],
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/AdditionalFarms",
+      "Entries": {
+        "FlashShifter.FrontierFarm/FrontierFarm": {
+          "ID": "FrontierFarm",
+          "TooltipStringPath": "Strings/UI:FrontierFarm",
+          "MapName": "Farm_FrontierFarm",
+          "IconTexture": "Mods/FlashShifter.FrontierFarm/Icon",
+          "WorldMapTexture": "Mods/FlashShifter.FrontierFarm/WorldMap"
+        }
+      }
+    },
+    { //Load tilesheets
+      "Action": "Load",
+      "Target": "Mods/FlashShifter.FrontierFarm/Icon",
+      "FromFile": "Assets/Tilesheets/Icon.png"
+    },
+    //Load Seasonal Tilesheets
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/summer_outdoorsTileSheet.png",
+      "FromFile": "Assets/Maps/Tilesheets/summer_outdoorsTileSheet.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/summer_outdoorsTileSheet2.png",
+      "FromFile": "Assets/Maps/Tilesheets/summer_outdoorsTileSheet2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/summer_beach.png",
+      "FromFile": "Assets/Maps/Tilesheets/summer_beach.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/summer_town.png",
+      "FromFile": "Assets/Maps/Tilesheets/summer_town.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/summer_Waterfalls.png",
+      "FromFile": "Assets/Maps/Tilesheets/summer_Waterfalls.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/summer_island_tilesheet_1.png",
+      "FromFile": "Assets/Maps/Tilesheets/summer_island_tilesheet_1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/summer_z_extras.png",
+      "FromFile": "Assets/Maps/Tilesheets/summer_z_extras.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/fall_outdoorsTileSheet.png",
+      "FromFile": "Assets/Maps/Tilesheets/fall_outdoorsTileSheet.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/fall_outdoorsTileSheet2.png",
+      "FromFile": "Assets/Maps/Tilesheets/fall_outdoorsTileSheet2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/fall_beach.png",
+      "FromFile": "Assets/Maps/Tilesheets/fall_beach.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/fall_town.png",
+      "FromFile": "Assets/Maps/Tilesheets/fall_town.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/fall_Waterfalls.png",
+      "FromFile": "Assets/Maps/Tilesheets/fall_Waterfalls.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/fall_island_tilesheet_1.png",
+      "FromFile": "Assets/Maps/Tilesheets/fall_island_tilesheet_1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/fall_z_extras.png",
+      "FromFile": "Assets/Maps/Tilesheets/fall_z_extras.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/winter_outdoorsTileSheet.png",
+      "FromFile": "Assets/Maps/Tilesheets/winter_outdoorsTileSheet.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/winter_outdoorsTileSheet2.png",
+      "FromFile": "Assets/Maps/Tilesheets/winter_outdoorsTileSheet2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/winter_beach.png",
+      "FromFile": "Assets/Maps/Tilesheets/winter_beach.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/winter_town.png",
+      "FromFile": "Assets/Maps/Tilesheets/winter_town.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/winter_Waterfalls.png",
+      "FromFile": "Assets/Maps/Tilesheets/winter_Waterfalls.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/winter_island_tilesheet_1.png",
+      "FromFile": "Assets/Maps/Tilesheets/winter_island_tilesheet_1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Assets/Maps/Tilesheets/winter_z_extras.png",
+      "FromFile": "Assets/Maps/Tilesheets/winter_z_extras.png"
+    },
+    //Farm Name + Description
+    {
+      "Action": "EditData",
+      "Target": "Strings/UI",
+      "Entries": {
+        "FrontierFarm": "{{i18n:FrontierFarm.Description}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      
+      "Entries": {
+        "FlashShifter.FrontierFarm_142": {
+          "Id": "FlashShifter.FrontierFarm_142",
+          "ItemId": "(O)142",
+          "Condition": "LOCATION_Season Here Spring Summer Fall Winter"
+        },
+        "FlashShifter.FrontierFarm_132": {
+          "Id": "FlashShifter.FrontierFarm_132",
+          "ItemId": "(O)132",
+          "Condition": "LOCATION_Season Here Spring Summer Fall Winter"
+        },
+        "FlashShifter.FrontierFarm_145": {
+          "Id": "FlashShifter.FrontierFarm_145",
+          "ItemId": "(O)145",
+          "Condition": "LOCATION_Season Here Spring Summer"
+        },
+        "FlashShifter.FrontierFarm_137": {
+          "Id": "FlashShifter.FrontierFarm_137",
+          "ItemId": "(O)137",
+          "Condition": "LOCATION_Season Here Spring Fall"
+        },
+        "FlashShifter.FrontierFarm_706": {
+          "Id": "FlashShifter.FrontierFarm_706",
+          "ItemId": "(O)706",
+          "Condition": "LOCATION_Season Here Spring Summer Fall"
+        },
+        "FlashShifter.FrontierFarm_704": {
+          "Id": "FlashShifter.FrontierFarm_704",
+          "ItemId": "(O)704",
+          "Condition": "LOCATION_Season Here Summer"
+        },
+        "FlashShifter.FrontierFarm_139": {
+          "Id": "FlashShifter.FrontierFarm_139",
+          "ItemId": "(O)139",
+          "Condition": "LOCATION_Season Here Fall"
+        },
+        "FlashShifter.FrontierFarm_141": {
+          "Id": "FlashShifter.FrontierFarm_141",
+          "ItemId": "(O)141",
+          "Condition": "LOCATION_Season Here Winter"
+        },
+        "FlashShifter.FrontierFarm_707": {
+          "Id": "FlashShifter.FrontierFarm_707",
+          "ItemId": "(O)707",
+          "Condition": "LOCATION_Season Here Winter"
+        }
+      }
+    },
+    //Farm Map
+    {
+      "Action": "Load",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/Maps/FrontierFarm.tmx"
+    },
+    //Sandbox Layout
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/Maps/FrontierFarm_Sandbox.tmx",
+      "When": {
+        "SandboxLayout": "true",
+        "FarmType": "FrontierFarm"
+      },
+      "Priority": "Early",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 65
+      }
+    },
+    //Farm Icon
+    //Farm World Map
+    {
+      "Action": "Load",
+      "Target": "Mods/FlashShifter.FrontierFarm/WorldMap",
+      "FromFile": "Assets/Maps/WorldMaps/WorldMap_Blank.png"
+    },
+    //Patches Seasonal World Map
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map",
+      "FromFile": "Assets/Maps/WorldMaps/spring_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Spring"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Summer",
+      "FromFile": "Assets/Maps/WorldMaps/summer_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Summer"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Fall",
+      "FromFile": "Assets/Maps/WorldMaps/fall_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Fall"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Map_Winter",
+      "FromFile": "Assets/Maps/WorldMaps/winter_FrontierFarm_WorldMap.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 44,
+        "Width": 137,
+        "Height": 60
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+        "Season": "Winter"
+      },
+      "Update": "OnLocationChange"
+    },
+    //Changes player icon position on Frontier Farm
+    {
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "TargetField": [
+        "Valley",
+        "MapAreas",
+        "Farm",
+        "WorldPositions",
+        "Farm"
+      ],
+      "Entries": {
+        "MapPixelArea": {
+          "X": 0,
+          "Y": 55,
+          "Width": 102,
+          "Height": 44
+        }
+      },
+      "When": {
+        "FarmType": "FrontierFarm"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/WorldMap",
+      "TargetField": [
+        "Valley",
+        "MapAreas",
+        "Farm",
+        "WorldPositions",
+        "FarmCave"
+      ],
+      "Entries": {
+        "MapPixelArea": {
+          "X": 53,
+          "Y": 55,
+          "Width": 0,
+          "Height": 0
+        }
+      },
+      "When": {
+        "FarmType": "FrontierFarm"
+      }
+    },
+    //Configurations
+    
+
+	//Remove Stone Pathways
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_RemoveStonePathways.tmx",
+	  "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 156,
+        "Height": 65
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveStonePathways": true,
+		"SandboxLayout": false
+      }
+    },
+	//Remove Tree Hiding Backyard Mouse Statue
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_RemoveTreeHidingBackyardMouseStatue.tmx",
+      "ToArea": {
+        "X": 105,
+        "Y": 10,
+        "Width": 4,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveTreeHidingBackyardMouseStatue": true
+      }
+    },
+	//Removes Picnic Table
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_RemovePicnicTable.tmx",
+      "ToArea": {
+        "X": 129,
+        "Y": 17,
+        "Width": 3,
+        "Height": 3
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemovePicnicTable": true
+      }
+    },
+	//Remove Vertical Fence
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_VerticalFenceRemoved.tmx",
+      "ToArea": {
+        "X": 131,
+        "Y": 30,
+        "Width": 5,
+        "Height": 27
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"RemoveEasternVerticalFence": true
+      }
+    },	
+	//Smaller Backyard Fence
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_SmallerBackyardFence1.tmx",
+      "ToArea": {
+        "X": 104,
+        "Y": 19,
+        "Width": 3,
+        "Height": 8
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"SmallerBackyardFence": true
+      }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_SmallerBackyardFence2.tmx",
+      "ToArea": {
+        "X": 122,
+        "Y": 22,
+        "Width": 12,
+        "Height": 3
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"SmallerBackyardFence": true
+      }
+    },
+	{
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/MapPatches/FrontierFarm_SmallerBackyardFence3.tmx",
+      "ToArea": {
+        "X": 132,
+        "Y": 15,
+        "Width": 2,
+        "Height": 7
+      },
+      "When": {
+        "FarmType": "FrontierFarm",
+		"SmallerBackyardFence": true
+      }
+    },
+    //Farm Strings
+    {
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "Entries": {
+        "FrontierFarm.1": "@ {{FarmName}}{{i18n:Signpost}}"
+      }
+    }
+  ]
+}
